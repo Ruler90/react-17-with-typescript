@@ -1,0 +1,82 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": ["airbnb", "airbnb/hooks", "airbnb-typescript"],
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "rules": {
+        "@typescript-eslint/indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "@typescript-eslint/naming-convention": [
+            "error",
+            {
+                "selector": "variable",
+                "format": ["camelCase", "PascalCase", "UPPER_CASE"],
+                "leadingUnderscore": "allow"
+            }
+        ],
+        "@typescript-eslint/no-empty-function": 0,
+        "class-methods-use-this": 0,
+        "import/prefer-default-export": 0,
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "jsx-a11y/anchor-is-valid": 0,
+        "jsx-a11y/click-events-have-key-events": 0,
+        "jsx-a11y/iframe-has-title": 0,
+        "jsx-a11y/label-has-associated-control": [
+            2,
+            {
+                "assert": "either"
+            }
+        ],
+        "linebreak-style": ["error", "unix"],
+        "max-len": [
+            "error",
+            {
+                "code": 150,
+                "ignoreComments": true,
+                "ignoreUrls": true,
+                "ignoreStrings": true,
+                "ignoreTemplateLiterals": true,
+                "ignoreRegExpLiterals": true
+            }
+        ],
+        "no-multiple-empty-lines": [
+            "error",
+            {
+                "max": 2
+            }
+        ],
+        "no-plusplus": 0,
+        "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"],
+        "no-underscore-dangle": 0,
+        "quotes": ["error", "single"],
+        "react/destructuring-assignment": 0,
+        "react/jsx-filename-extension": 0,
+        "react/jsx-indent-props": ["error", 4],
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-one-expression-per-line": 0,
+        "react/jsx-props-no-spreading": 0,
+        "react/no-danger": 2,
+        "react/prop-types": 0,
+        "react/require-default-props": 0,
+        "semi": ["error", "always"],
+        "react/function-component-definition": 0,
+        "react/react-in-jsx-scope": 0,
+        "react-hooks/exhaustive-deps": 0,
+        "react/jsx-key": 2
+    }
+}

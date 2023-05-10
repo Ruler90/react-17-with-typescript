@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app-header {
+    margin: 16px 8px;
+}
+
+a {
+    max-width: 300px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 8px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.user-container,
+.user-details-container {
+    max-width: 300px;
+    margin: 8px;
+    padding: 8px;
+    border: 1px solid #000;
+}
+
+.user-container:hover {
+    background-color: rgb(253, 255, 198);
+}
+
+.section-component {
+    max-width: 700px;
+    display: block;
+    margin: 8px;
+    padding: 16px;
+    border: 1px solid #000;
+}
+
+.section-component p {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
