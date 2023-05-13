@@ -4,8 +4,58 @@
     box-sizing: border-box;
 }
 
+body {
+    padding: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 8px;
+}
+
 .app-header {
     margin: 16px 8px;
+}
+
+.header-input-label {
+    display: block;
+    margin: 16px 8px 8px;
+}
+
+.header-input {
+    margin: 8px;
+}
+
+.show-text-button {
+    all: unset;
+    margin: 8px;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #000;
+    text-transform: uppercase;
+    border: 1px solid #000;
+    border-radius: 4px;
+    transition: background-color 300ms;
+}
+
+.show-text-button:hover {
+    background-color: #fff9a1;
+    cursor: pointer;
+}
+
+.text-from-input {
+    margin: 8px 0 32px 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.text-from-input span {
+    font-weight: normal;
+    color: blue;
 }
 
 a {
