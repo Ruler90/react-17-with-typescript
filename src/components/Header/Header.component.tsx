@@ -1,13 +1,19 @@
+import TextInputAndOutput from 'components/TextInputAndOutput/TextInputAndOutput.component';
+
 interface HeaderProps {
-    text: string;
-    version: number;
+    text?: string;
+    author?: string;
 }
 
-const Header = ({ text, version }:HeaderProps) => (
-    <header className="app-header">
-        <h1>{text}</h1>
-        <h2>version: {version}</h2>
-    </header>
+const Header = ({ text, author }:HeaderProps) => (
+    <div>
+        <header className="app-header">
+            <h1>{text}</h1>
+            <h2>Author: {author}</h2>
+        </header>
+        <TextInputAndOutput />
+    </div>
 );
+
 
 export default Header;

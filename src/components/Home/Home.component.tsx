@@ -3,11 +3,11 @@ import Section from 'components/Section/Section.component';
 
 const Home = () => {
     const appName = 'This is my new App';
-    const version = 2;
+    const author = 'Ruler90';
 
     return (
         <>
-            <Header text={appName} version={version} />
+            <Header text={appName} author={author} />
             <Section>
                 <p>{'This is the Section component that renders everything that is passed to it as it\'s child.'}</p>
                 <p>We can think of it as a wrapper for the content.</p>
