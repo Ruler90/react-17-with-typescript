@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { UserType } from 'utils/types';
 
-const UserDetails = () => {
+const UserDetails: React.FC = () => {
     const { users } = useContext(UsersContext);
     const [user, setUser] = useState<UserType | null>(null);
     const [error, setError] = useState(false);

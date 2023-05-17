@@ -5,7 +5,7 @@ interface HeaderProps {
     author?: string;
 }
 
-const Header = ({ text, author }:HeaderProps) => (
+const Header: React.FC<HeaderProps> = ({ text, author }) => (
     <div>
         <header className="app-header">
             <h1>{text}</h1>

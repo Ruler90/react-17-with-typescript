@@ -1,6 +1,6 @@
 import { ChangeEvent, useState } from 'react';
 
-const TextInputAndOutput = () => {
+const TextInputAndOutput: React.FC = () => {
     const [text, setText] = useState('');
     const [showText, setShowText] = useState(false);
 

@@ -4,7 +4,7 @@ import {
     useCallback, useContext, useEffect, useState,
 } from 'react';
 
-const UsersList = () => {
+const UsersList: React.FC = () => {
     const { users, setUsers } = useContext(UsersContext);
     const [status, setStatus] = useState('not loaded');
 
@@ -24,7 +24,6 @@ const UsersList = () => {
             setStatus('error');
         }
     }, []);
-
 
     useEffect(() => {
         // dodana if'ka, żeby korzystało z kontekstu:

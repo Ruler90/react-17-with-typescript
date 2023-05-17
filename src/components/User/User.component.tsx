@@ -5,7 +5,7 @@ interface UserProps {
     user: UserType
 }
 
-const User = ({ user }:UserProps) => (
+const User: React.FC<UserProps> = ({ user }) => (
     <Link to={`/user/${user.id}`}>
         <div className="user-container">
             <p>{user.name}</p>

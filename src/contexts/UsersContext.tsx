@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, useMemo } from 'react';
 import { UserType } from 'utils/types';
 
 interface IUsersContext {
@@ -17,12 +17,17 @@ export const UsersContext = createContext<IUsersContext>({
 // export const UsersContext = createContext([[], () => {}]);
 // https://github.com/btholt/citr-v7-project/blob/main/11-context/src/ThemeContext.js
 
-const UsersContextProvider = (props:any) => {
+const UsersContextProvider = ({ children }:any) => {
     const [users, setUsers] = useState<UserType[]>([]);
 
+    // bez useMemo ESLint krzyczy, że przekazujemy w providerze obiekt, który zmienia się przy każdym renderze
+    const contextValue = useMemo(() => ({
+        users, setUsers,
+    }), [users]);
+
     return (
-        <UsersContext.Provider value={{ users, setUsers }}>
-            {props.children}
+        <UsersContext.Provider value={contextValue}>
+            {children}
         </UsersContext.Provider>
     );
 };
