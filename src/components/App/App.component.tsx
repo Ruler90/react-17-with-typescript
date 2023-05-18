@@ -1,5 +1,4 @@
 import { StrictMode, Suspense, lazy } from 'react';
-import ReactDOM from 'react-dom';
 import {
     BrowserRouter, Routes, Route,
 } from 'react-router-dom';
@@ -27,4 +26,4 @@ const App = () => (
     </StrictMode>
 );
 
-ReactDOM.render(<App />, document.getElementById('root'));
+export default App;
