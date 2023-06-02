@@ -4,24 +4,24 @@ import {
 } from 'react-router-dom';
 import Home from 'components/Home/Home.component';
 import Nav from 'components/Nav/Nav.component';
-import UserContextProvider from 'contexts/UsersContext';
+import PostsContextProvider from 'contexts/PostsContext';
 
-const UsersList = lazy(() => import('components/UsersList/UsersList.component'));
-const UserDetails = lazy(() => import('components/UserDetails/UserDetails.component'));
+const PostsList = lazy(() => import('components/PostsList/PostsList.component'));
+const PostDetails = lazy(() => import('components/PostDetails/PostDetails.component'));
 
 const App = () => (
     <StrictMode>
         <BrowserRouter>
             <Nav />
-            <UserContextProvider>
+            <PostsContextProvider>
                 <Suspense fallback={<p>loading...</p>}>
                     <Routes>
-                        <Route path="/users-list/" element={<UsersList />} />
-                        <Route path="/user/:id" element={<UserDetails />} />
+                        <Route path="/posts-list/" element={<PostsList />} />
+                        <Route path="/post/:id" element={<PostDetails />} />
                         <Route path="/" element={<Home />} />
                     </Routes>
                 </Suspense>
-            </UserContextProvider>
+            </PostsContextProvider>
         </BrowserRouter>
     </StrictMode>
 );

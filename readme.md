@@ -2,7 +2,7 @@
 
 ## Info
 
--  Repo przygotowane podczas oglądania kursu `Complete Intro to React v7` na Frontend Masters.
+-  Repo przygotowane podczas oglądania kursu `Complete Intro to React v7` oraz `Intermediate React v4` na Frontend Masters.
 -  Kurs pokazuje fajny sposób na developowanie apki od zera bez `create-react-app` oraz za pomocą Parcela, dzięki czemu można pominąć m.in. żmudną konfigurację Webpacka.
 -  Nie jest to kod z kursu, tylko mój własny testowy kod:
    -  zastosowałem tu sporo koncepcji pokazanych w kursie;

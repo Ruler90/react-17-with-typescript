@@ -75,15 +75,21 @@ a {
     text-underline-offset: 3px;
 }
 
-.user-container,
-.user-details-container {
+.posts-container {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-container,
+.post-details-container {
     max-width: 300px;
     margin: 8px;
     padding: 8px;
     border: 1px solid #000;
 }
 
-.user-container:hover {
+.post-container:hover {
     background-color: rgb(253, 255, 198);
 }
 
