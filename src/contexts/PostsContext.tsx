@@ -1,9 +1,9 @@
 import { createContext, useState, useMemo } from 'react';
-import { PostType } from 'utils/types';
+import { IPost } from 'utils/types';
 
 interface IPostsContext {
-    posts: PostType[],
-    setPosts: (posts:PostType[]) => void
+    posts: IPost[],
+    setPosts: (posts:IPost[]) => void
 }
 
 export const PostsContext = createContext<IPostsContext>({
@@ -18,7 +18,7 @@ export const PostsContext = createContext<IPostsContext>({
 // https://github.com/btholt/citr-v7-project/blob/main/11-context/src/ThemeContext.js
 
 const PostsContextProvider = ({ children }:any) => {
-    const [posts, setPosts] = useState<PostType[]>([]);
+    const [posts, setPosts] = useState<IPost[]>([]);
 
     // bez useMemo ESLint krzyczy, że przekazujemy w providerze obiekt, który zmienia się przy każdym renderze
     const contextValue = useMemo(() => ({

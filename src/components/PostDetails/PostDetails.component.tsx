@@ -1,11 +1,11 @@
 import { PostsContext } from 'contexts/PostsContext';
 import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { PostType } from 'utils/types';
+import { IPost } from 'utils/types';
 
 const PostDetails: React.FC = () => {
     const { posts } = useContext(PostsContext);
-    const [post, setPost] = useState<PostType | null>(null);
+    const [post, setPost] = useState<IPost | null>(null);
     const [error, setError] = useState(false);
     // nazwa parametru jest pobierana z Route z App.tsx:
     // <Route path="/post/:id" element={<PostDetails />} />

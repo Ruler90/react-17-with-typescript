@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import { PostType } from 'utils/types';
+import { IPost } from 'utils/types';
 
 interface PostProps {
-    post: PostType
+    post: IPost
 }
 
 const Post: React.FC<PostProps> = ({ post }) => (
