@@ -1,17 +1,24 @@
-import { Link } from 'react-router-dom';
-import { UserType } from 'utils/types';
+import { UserContext } from 'contexts/UserContext';
+import { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
-interface UserProps {
-    user: UserType
-}
+const User = () => {
+    const { user, setUser } = useContext(UserContext);
+    const navigate = useNavigate();
 
-const User = ({ user }:UserProps) => (
-    <Link to={`/user/${user.id}`}>
+    const logoutHandler = () => {
+        setUser({ username: null, password: null });
+        navigate('/');
+    };
+
+    return (
         <div className="user-container">
-            <p>{user.name}</p>
-            <p>{user.email}</p>
+            <p><b>User:</b> {user?.username ? user.username : 'Anonymous'}</p>
+            {user?.username
+                ? <button type="button" className="logout-button" onClick={() => logoutHandler()}>Log out</button>
+                : <Link to="/login-page" className="login-button">Login</Link>}
         </div>
-    </Link>
-);
+    );
+};
 
 export default User;

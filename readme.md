@@ -2,7 +2,7 @@
 
 ## Info
 
--  Repo przygotowane podczas oglądania kursu `Complete Intro to React v7` na Frontend Masters.
+-  Repo przygotowane podczas oglądania kursu `Complete Intro to React v7` oraz `Intermediate React v4` na Frontend Masters.
 -  Kurs pokazuje fajny sposób na developowanie apki od zera bez `create-react-app` oraz za pomocą Parcela, dzięki czemu można pominąć m.in. żmudną konfigurację Webpacka.
 -  Nie jest to kod z kursu, tylko mój własny testowy kod:
    -  zastosowałem tu sporo koncepcji pokazanych w kursie;
@@ -33,7 +33,7 @@ Opis krok po kroku, jak powstał ten projekt:
 -  `npm i react@17.0.2 react-dom@17.0.2 @types/react @types/react-dom`
 -  `npm i -D typescript`
 -  Dodajemy plik ze swoim configiem TSa - `tsconfig.json`.
--  `npm i -D eslint eslint-config-airbnb eslint-config-airbnb-base eslint-config-airbnb-typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser`
+-  `npm i -D eslint eslint-config-airbnb eslint-config-airbnb-base eslint-config-airbnb-typescript eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/eslint-plugin @typescript-eslint/parser`
 -  Dodajemy plik ze swoim configiem ESLinta - `.eslintrc.json` lub działamy na ustawieniach domyślnych i będziemy już podczas pracy w projekcie modyfikować niektóre zasady.
 -  `npm i -D parcel`
 -  W `package.json` dodajemy skrypt: `"dev": "parcel src/index.html"` oraz `"build": "parcel build src/index.html"`.

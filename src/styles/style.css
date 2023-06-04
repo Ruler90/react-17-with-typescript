@@ -65,9 +65,15 @@ a {
     text-decoration: none;
 }
 
-.nav-link {
-    display: inline-block;
+.nav {
+    margin-bottom: 16px;
     padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-link {
     color: #000;
     font-size: 16px;
     font-weight: 700;
@@ -75,15 +81,51 @@ a {
     text-underline-offset: 3px;
 }
 
-.user-container,
-.user-details-container {
+.user-container {
+    margin-left: auto;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 16px;
+}
+
+.login-button {
+    all: unset;
+    padding: 8px 16px;
+    background-color: aquamarine;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.logout-button {
+    all: unset;
+    padding: 8px 16px;
+    background-color: rgb(255, 189, 127);
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.login-button:hover,
+.logout-button:hover {
+    cursor: pointer;
+}
+
+.posts-container {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-container,
+.post-details-container {
     max-width: 300px;
     margin: 8px;
     padding: 8px;
     border: 1px solid #000;
 }
 
-.user-container:hover {
+.post-container:hover {
     background-color: rgb(253, 255, 198);
 }
 
@@ -98,4 +140,26 @@ a {
 .section-component p {
     margin-bottom: 8px;
     font-size: 18px;
+}
+
+.login-form {
+    display: grid;
+    gap: 16px;
+}
+
+.login-form__input {
+    margin-left: 8px;
+}
+
+.login-form__btn {
+    all: unset;
+    max-width: max-content;
+    padding: 8px 16px;
+    background-color: aquamarine;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.login-form__btn:hover {
+    cursor: pointer;
 }

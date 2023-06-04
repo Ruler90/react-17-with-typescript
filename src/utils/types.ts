@@ -1,23 +1,18 @@
-export interface UserType {
+export interface IUser {
+    username: string | null,
+    password: string | null
+}
+
+export interface IPost {
     id: number,
-    name: string,
-    username: string,
-    email: string,
-    address: {
-        street: string,
-        suite: string,
-        city: string,
-        zipcode: number,
-        geo: {
-            lat: number,
-            lng: number
-        }
-    },
-    phone: number,
-    website: string,
-    company: {
-        name: string,
-        catchPhrase: string,
-        bs: string
-    }
+    userId: number,
+    title: string,
+    body: string,
+}
+
+export enum postRequestStatuses {
+    NOT_LOADED = 'not loaded',
+    LOADING = 'loading',
+    LOADED = 'loaded',
+    ERROR = 'error',
 }

@@ -1,7 +1,7 @@
 import Header from 'components/Header/Header.component';
 import Section from 'components/Section/Section.component';
 
-const Home = () => {
+const Home: React.FC = () => {
     const appName = 'This is my new App';
     const author = 'Ruler90';
 

@@ -4,7 +4,7 @@ interface SectionProps {
     children: ReactNode
 }
 
-const Section = ({ children }:SectionProps) => (
+const Section: React.FC<SectionProps> = ({ children }) => (
     <section className="section-component">
         {children}
     </section>
