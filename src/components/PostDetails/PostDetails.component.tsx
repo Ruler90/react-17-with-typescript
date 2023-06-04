@@ -1,13 +1,12 @@
 import { PostsContext } from 'contexts/PostsContext';
-import { UserContext } from 'contexts/UserContext';
 import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useUserLoginState } from 'hooks/useUserLoginState';
 import { IPost } from 'utils/types';
 
 const PostDetails: React.FC = () => {
     const { posts } = useContext(PostsContext);
-    const { user } = useContext(UserContext);
-    const isUserLoggedIn = user?.username && user.password;
+    const isUserLoggedIn = useUserLoginState();
     const [post, setPost] = useState<IPost | null>(null);
     const [error, setError] = useState(false);
     // nazwa parametru jest pobierana z Route z App.tsx:

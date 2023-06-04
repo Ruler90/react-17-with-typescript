@@ -1,6 +1,6 @@
 import Post from 'components/Post/Post.component';
 import { PostsContext } from 'contexts/PostsContext';
-import { UserContext } from 'contexts/UserContext';
+import { useUserLoginState } from 'hooks/useUserLoginState';
 import {
     useCallback, useContext, useEffect, useState,
 } from 'react';
@@ -14,8 +14,7 @@ enum postRequestStatuses {
 
 const PostsList: React.FC = () => {
     const { posts, setPosts } = useContext(PostsContext);
-    const { user } = useContext(UserContext);
-    const isUserLoggedIn = user?.username && user.password;
+    const isUserLoggedIn = useUserLoginState();
     const [status, setStatus] = useState(postRequestStatuses.NOT_LOADED);
 
     // useCallback, AbortController, try...catch pisane z pomocą Binga
