@@ -1,12 +1,14 @@
 import { UserContext } from 'contexts/UserContext';
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const User = () => {
     const { user, setUser } = useContext(UserContext);
+    const navigate = useNavigate();
 
     const logoutHandler = () => {
         setUser({ username: null, password: null });
+        navigate('/');
     };
 
     return (
