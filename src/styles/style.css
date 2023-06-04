@@ -65,14 +65,50 @@ a {
     text-decoration: none;
 }
 
-.nav-link {
-    display: inline-block;
+.nav {
+    margin-bottom: 16px;
     padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-link {
     color: #000;
     font-size: 16px;
     font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+
+.user-container {
+    margin-left: auto;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    align-items: center;
+    gap: 16px;
+}
+
+.login-button {
+    all: unset;
+    padding: 8px 16px;
+    background-color: aquamarine;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.logout-button {
+    all: unset;
+    padding: 8px 16px;
+    background-color: rgb(255, 189, 127);
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.login-button:hover,
+.logout-button:hover {
+    cursor: pointer;
 }
 
 .posts-container {
@@ -104,4 +140,26 @@ a {
 .section-component p {
     margin-bottom: 8px;
     font-size: 18px;
+}
+
+.login-form {
+    display: grid;
+    gap: 16px;
+}
+
+.login-form__input {
+    margin-left: 8px;
+}
+
+.login-form__btn {
+    all: unset;
+    max-width: max-content;
+    padding: 8px 16px;
+    background-color: aquamarine;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.login-form__btn:hover {
+    cursor: pointer;
 }
