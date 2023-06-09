@@ -28,6 +28,7 @@ export const useRequestPosts: useRequestPost = (id) => {
         } catch (error) {
             setStatus(postRequestStatuses.ERROR);
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
@@ -43,7 +44,7 @@ export const useRequestPosts: useRequestPost = (id) => {
             };
         }
         return () => null;
-    }, [requestPosts]);
+    }, [posts.length, isUserLoggedIn, requestPosts]);
     return status;
 };
 

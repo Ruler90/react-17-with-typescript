@@ -76,7 +76,7 @@
         "semi": ["error", "always"],
         "react/function-component-definition": 0,
         "react/react-in-jsx-scope": 0,
-        "react-hooks/exhaustive-deps": 0,
+        "react-hooks/exhaustive-deps": 2,
         "react/jsx-key": 2
     }
 }
